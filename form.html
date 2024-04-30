@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application</title>
+    <link rel="stylesheet" href="form.css">
+
+</head>
+<body>
+    <!-- <center>
+        <div class="container"> -->
+
+    <form action="">
+        <h2>Job Application</h2><br>
+        <hr>
+        <table>
+            <tr>
+                <td>First Name</td>
+                <td>Last Name</td>
+
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="Enter First Name"></td>
+                <td><input type="text" placeholder="Enter Last Name"></td>
+            </tr>
+            <br>
+            <tr>
+                <td>Email</td>
+                <td>Job Role</td>
+            </tr>
+            <tr>
+                <td><input type="email" placeholder="Enter Email"></td>
+                <td><select name="job" id="job">
+                    <option value="Frontend">Frontend Developer</option>
+                    <option value="Backend">Backend Developer</option>
+                    <option value="fullStack">Full Stack Developer</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Enter Address</td>
+            </tr>
+            <tr>
+                <td colspan="2"><textarea name="address" id="address" cols="40%" rows="5"></textarea></td>
+            </tr>
+        
+        <tr>
+            <td>City</td>
+            <td>Pincode</td>
+        </tr>
+        <tr>
+            <td><input type="text" placeholder="Enter City"></td>
+            <td><input type="number" placeholder="Enter Pincode"></td>
+        </tr>
+        <tr>
+            <td><label for="date">Date</label></td>
+            <td><label for="cv">Upload Your CV</label></td>
+    </tr>
+        <tr>
+            
+            <td><input type="date" name="date" value="" id="date"></td>
+            <td><input type="file" id="cv"></td>
+        </tr>
+    </table>
+    <button type="submit">Apply Now</button>
+    </form>
+<!-- </div>
+</center> -->
+<script>
+    // Function to set current date
+    function setCurrentDate() {
+        var currentDate = new Date();
+        var dateString = currentDate.toISOString().slice(0,10);
+        document.getElementById("date").value = dateString;
+    }
+
+    // Call the function when the page loads
+    window.onload = setCurrentDate;
+</script>
+</body>
+</html>
